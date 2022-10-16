@@ -19,13 +19,20 @@ h1 {
   margin: 6vw;
 }
 
+h2 {
+  font-family: adlery-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3vw;
+}
+
 main {
   padding-left: 20%;
 }
 main .menu {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
   width: 20%;
   height: 100vh;
@@ -37,16 +44,10 @@ main .menu {
   background-size: 4px 100%;
   background-repeat: no-repeat;
 }
-main .menu h2 {
-  font-family: adlery-pro, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 3vw;
-}
 main .menu nav {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
   height: 55%;
 }
@@ -76,18 +77,92 @@ main .menu nav a {
   text-align: justify;
 }
 .histoire h2 {
-  font-family: adlery-pro, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 3vw;
   margin: 6.5vw auto 4vw 2vw;
 }
 .histoire h3 {
   font-family: adlery-pro, sans-serif;
-  font-weight: 100;
+  font-weight: 400;
   font-style: normal;
   font-size: 2.6vw;
   margin: 5.5vw auto 3vw 2vw;
+}
+
+.galerie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10vw;
+}
+
+.contentGalerie {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  grid-template-rows: 25%;
+  width: 95%;
+  height: 200vh;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #ecc2ab;
+}
+.contentGalerie div {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  border: solid 3px #54505e;
+  text-align: center;
+}
+.contentGalerie div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.contentGalerie div:nth-of-type(1) {
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+.contentGalerie div:nth-of-type(2) {
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+.contentGalerie div:nth-of-type(3) {
+  grid-column-start: 1;
+  grid-row-start: 3;
+}
+.contentGalerie div:nth-of-type(4) {
+  grid-column-start: 1;
+  grid-row-start: 4;
+}
+.contentGalerie div:nth-of-type(2) {
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+.contentGalerie div:nth-of-type(4) {
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+.contentGalerie div:nth-of-type(6) {
+  grid-column-start: 2;
+  grid-row-start: 3;
+}
+.contentGalerie div:nth-of-type(8) {
+  grid-column-start: 2;
+  grid-row-start: 4;
+}
+.contentGalerie div:nth-of-type(3) {
+  grid-column-start: 3;
+  grid-row-start: 1;
+}
+.contentGalerie div:nth-of-type(6) {
+  grid-column-start: 3;
+  grid-row-start: 2;
+}
+.contentGalerie div:nth-of-type(9) {
+  grid-column-start: 3;
+  grid-row-start: 3;
+}
+.contentGalerie div:nth-of-type(12) {
+  grid-column-start: 3;
+  grid-row-start: 4;
 }
 
 /*# sourceMappingURL=main.css.map */
