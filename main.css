@@ -26,6 +26,26 @@ h2 {
   font-size: 3vw;
 }
 
+.cls-1 {
+  fill: none;
+  stroke: #54505e;
+  stroke-miterlimit: 10;
+  stroke-width: 3px;
+}
+
+.cls-2 {
+  stroke: #54505e;
+  fill: transparent;
+}
+
+.light {
+  width: 8vw;
+  position: absolute;
+  bottom: 25%;
+  right: -4vw;
+  z-index: 10;
+}
+
 main {
   padding-left: 20%;
 }
@@ -39,10 +59,7 @@ main .menu {
   position: fixed;
   top: 0;
   left: 0;
-  background-image: linear-gradient(#54505e 75%, rgba(0, 0, 0, 0) 0%);
-  background-position: right;
-  background-size: 4px 100%;
-  background-repeat: no-repeat;
+  animation: openNav 2s both;
 }
 main .menu nav {
   display: flex;
@@ -58,7 +75,16 @@ main .menu nav a {
   border-bottom: solid 2px #e5989b;
 }
 
-.Acrelyc {
+@keyframes openNav {
+  from {
+    top: -25vh;
+    height: 0;
+  }
+  100% {
+    height: 100vh;
+  }
+}
+.acrelyc {
   height: 100vh;
   background: url("img/samaritaineAcrelycDetour.png") no-repeat;
   background-size: 90%;
@@ -108,13 +134,14 @@ main .menu nav a {
   margin: auto;
   width: 100%;
   height: 100%;
-  border: solid 3px #54505e;
   text-align: center;
+  padding: 5%;
 }
 .contentGalerie div img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border: solid 3px #54505e;
 }
 .contentGalerie div:nth-of-type(1) {
   grid-column-start: 1;
@@ -163,6 +190,11 @@ main .menu nav a {
 .contentGalerie div:nth-of-type(12) {
   grid-column-start: 3;
   grid-row-start: 4;
+}
+
+.dark-mode {
+  background-color: #54505e;
+  color: #ffd4bb;
 }
 
 /*# sourceMappingURL=main.css.map */

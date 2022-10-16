@@ -34,6 +34,27 @@ h2{
     @include mixins.title(3);
 }
 
+.cls-1{
+    fill:none;
+    stroke:$text-color;
+    stroke-miterlimit:10;
+    stroke-width:3px;
+}
+
+.cls-2{
+    stroke:$text-color;
+    fill:transparent;
+}
+
+
+.light{
+    width: 8vw;
+    position: absolute;
+    bottom: 25%;
+    right: -4vw;
+    z-index: 10;
+}
+
 main{
     padding-left: 20%;
 
@@ -47,10 +68,12 @@ main{
         top: 0;
         left: 0;
         
-        background-image: linear-gradient($text-color 75%, rgba(0, 0, 0, 0) 0%);
-        background-position: right;
-        background-size: 4px 100%;
-        background-repeat: no-repeat;
+        // background-image: linear-gradient($text-color 75%, rgba(0, 0, 0, 0) 0%);
+        // background-position: right;
+        // background-size: 4px 100%;
+        // background-repeat: no-repeat;
+
+        animation: openNav 2s both;
 
         nav {
             @include mixins.flexCenterColumn();
@@ -67,7 +90,19 @@ main{
     }
 }
 
-.Acrelyc{
+@keyframes openNav {
+    from{
+        top: -25vh;
+        height: 0;
+    }
+    100%{
+        height: 100vh;
+    }
+}
+
+
+
+.acrelyc{
     height: 100vh;
     background: url("img/samaritaineAcrelycDetour.png")  no-repeat;
     background-size: 90%;
@@ -106,6 +141,7 @@ main{
 
     grid-template-columns: 30% 40% 30%;
     grid-template-rows: 25%;
+    
 
     width: 95%;
     height: 200vh; 
@@ -117,13 +153,14 @@ main{
         margin: auto;
         width: 100%;
         height: 100%;
-        border: solid 3px $text-color;
         text-align: center;
+        padding: 5%;
 
         img{
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border: solid 3px $text-color;
         }
     }
 
@@ -195,4 +232,10 @@ main{
     //     grid-row: 2 / 3;
     // }
     
+}
+
+
+.dark-mode{
+    background-color: $text-color;
+    color: $background-color;
 }
