@@ -18,12 +18,23 @@ h1 {
   font-size: 4vw;
   margin: 6vw;
 }
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 7.2vw;
+    margin: 10vw auto;
+  }
+}
 
 h2 {
   font-family: adlery-pro, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 3vw;
+}
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 6.2vw;
+  }
 }
 
 .cls-1 {
@@ -37,6 +48,11 @@ h2 {
   stroke: #54505e;
   fill: transparent;
 }
+@media screen and (max-width: 768px) {
+  .cls-2 {
+    stroke-width: 2px;
+  }
+}
 
 .light {
   width: 8vw;
@@ -45,9 +61,22 @@ h2 {
   right: -4vw;
   z-index: 10;
 }
+@media screen and (max-width: 768px) {
+  .light {
+    position: fixed;
+    top: -25vh;
+    left: 0.5vw;
+    width: 15vw;
+  }
+}
 
 main {
   padding-left: 20%;
+}
+@media screen and (max-width: 768px) {
+  main {
+    padding: 0;
+  }
 }
 main .menu {
   display: flex;
@@ -61,6 +90,22 @@ main .menu {
   left: 0;
   animation: openNav 2s both;
 }
+@media screen and (max-width: 768px) {
+  main .menu {
+    flex-direction: row;
+    justify-content: space-around;
+    bottom: 0;
+    top: auto;
+    width: 100%;
+    height: 16vh;
+    animation: none;
+    background-color: #ffd4bb;
+    background-image: linear-gradient(#54505e 100%, rgba(0, 0, 0, 0) 0%);
+    background-position: top left;
+    background-size: 85% 2px;
+    background-repeat: no-repeat;
+  }
+}
 main .menu nav {
   display: flex;
   flex-direction: column;
@@ -68,11 +113,23 @@ main .menu nav {
   justify-content: space-between;
   height: 55%;
 }
+@media screen and (max-width: 768px) {
+  main .menu nav {
+    flex-direction: row;
+    height: 100%;
+    width: 60%;
+  }
+}
 main .menu nav a {
   font-weight: 700;
   font-size: 1.6vw;
   text-decoration: none;
   border-bottom: solid 2px #e5989b;
+}
+@media screen and (max-width: 768px) {
+  main .menu nav a {
+    font-size: 3.2vw;
+  }
 }
 
 @keyframes openNav {
@@ -84,11 +141,29 @@ main .menu nav a {
     height: 100vh;
   }
 }
+.homeTitle {
+  display: none;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .homeTitle {
+    display: block;
+    margin: 15vh auto;
+  }
+}
+
 .acrelyc {
   height: 100vh;
   background: url("img/samaritaineAcrelycDetour.png") no-repeat;
   background-size: 90%;
   background-position: 50%;
+}
+@media screen and (max-width: 768px) {
+  .acrelyc {
+    height: 40vh;
+    background-size: 100%;
+    background-position: 50%;
+  }
 }
 
 .histoire {
@@ -105,12 +180,23 @@ main .menu nav a {
 .histoire h2 {
   margin: 6.5vw auto 4vw 2vw;
 }
+@media screen and (max-width: 768px) {
+  .histoire h2 {
+    margin: 12vw auto 7vw 4vw;
+  }
+}
 .histoire h3 {
   font-family: adlery-pro, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 2.6vw;
   margin: 5.5vw auto 3vw 2vw;
+}
+@media screen and (max-width: 768px) {
+  .histoire h3 {
+    font-size: 6vw;
+    margin: 10vw auto 6vw 4vw;
+  }
 }
 
 .galerie {
@@ -129,6 +215,15 @@ main .menu nav a {
   margin: auto;
   border-radius: 5px;
   background-color: #ecc2ab;
+}
+@media screen and (max-width: 768px) {
+  .contentGalerie {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+    margin-bottom: 10vh;
+  }
 }
 .contentGalerie div {
   margin: auto;

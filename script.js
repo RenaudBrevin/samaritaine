@@ -4,8 +4,6 @@ var night = document.querySelectorAll('.selectNight');
 var light = document.querySelectorAll('.cls-1');
 var lustre = document.querySelectorAll('.cls-2');
 
-console.log(night);
-
 function darkMode(){
     night.forEach(element => {
         if (element != null){

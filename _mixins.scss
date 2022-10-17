@@ -16,5 +16,10 @@
     font-weight: 400;
     font-style: normal;
     font-size: $fontSize + vw;
-    
+}
+
+@mixin  breakpoint($width){
+    @media screen and (max-width: $width){
+        @content;
+    }
 }
