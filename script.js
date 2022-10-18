@@ -1,5 +1,6 @@
 var AcrylicNight = document.querySelector('.acrelyc');
 var body = document.querySelector('body');
+var main = document.querySelector('main');
 var night = document.querySelectorAll('.selectNight');
 var light = document.querySelectorAll('.cls-1');
 var lustre = document.querySelectorAll('.cls-2');
@@ -10,6 +11,7 @@ function darkMode(){
             element.classList.add('dark-mode');
         };
     });
+    main.style.backgroundColor = "$text-color";
 
     if (AcrylicNight != null){
         AcrylicNight.style.backgroundImage = "url('img/samaritaineAcrelycDetourNight.png')";
@@ -28,6 +30,8 @@ function lightMode(){
         };
     });
 
+    main.style.backgroundColor = "$backgrund-color";
+
     if (AcrylicNight != null){
         AcrylicNight.style.backgroundImage = "url('img/samaritaineAcrelycDetour.png')";
     };
@@ -38,11 +42,11 @@ function lightMode(){
 };
 
 
-
 if(localStorage.getItem("mode")=="dark")
     darkMode();
 else
     lightMode();
+
 
 function change(){   
     if (body.classList.contains("dark-mode"))
@@ -50,7 +54,6 @@ function change(){
     else
         darkMode();
 };
-
 
 
 function changeLight(color){
@@ -61,3 +64,14 @@ function changeLight(color){
         lumiere.style.stroke = color;
     });
 }
+
+// Light Animation
+
+var laLight = document.querySelector(".light");
+
+laLight.addEventListener("mouseover", function() {
+    laLight.classList.add('animlight');
+    setTimeout(function() {
+        laLight.classList.remove('animlight');
+    }, 1200);
+}, false);
