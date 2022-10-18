@@ -68,6 +68,13 @@ svg {
 @media screen and (max-width: 768px) {
   .light {
     position: fixed;
+    top: -30vw;
+    left: 2vw;
+    width: 12vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  .light {
     top: -55vw;
     left: 0.5vw;
     width: 15vw;
@@ -77,7 +84,6 @@ svg {
 .animlight {
   transform-origin: top;
   animation: basculement 1s linear;
-  animation-fill-mode: forwards;
 }
 
 @keyframes basculement {
@@ -108,7 +114,7 @@ main {
 }
 @media screen and (max-width: 768px) {
   main {
-    padding: 0;
+    padding: 0 0 16vh 0;
   }
 }
 main .menu {
@@ -132,6 +138,7 @@ main .menu {
     width: 100%;
     height: 16vh;
     animation: none;
+    background-color: #ffd4bb;
     background-image: linear-gradient(#54505e 100%, rgba(0, 0, 0, 0) 0%);
     background-position: top left;
     background-size: 85% 2px;
@@ -160,6 +167,11 @@ main .menu nav a {
 }
 @media screen and (max-width: 768px) {
   main .menu nav a {
+    font-size: 2.4vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  main .menu nav a {
     font-size: 3.2vw;
   }
 }
@@ -180,6 +192,11 @@ main .menu nav a {
 @media screen and (max-width: 768px) {
   .homeTitle {
     display: block;
+    margin: 12vh auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .homeTitle {
     margin: 15vh auto;
   }
 }
@@ -191,6 +208,13 @@ main .menu nav a {
   background-position: 50%;
 }
 @media screen and (max-width: 768px) {
+  .acrelyc {
+    height: 60vw;
+    background-size: 95%;
+    background-position: 50% 10%;
+  }
+}
+@media screen and (max-width: 480px) {
   .acrelyc {
     height: 40vh;
     background-size: 100%;
@@ -226,8 +250,13 @@ main .menu nav a {
 }
 @media screen and (max-width: 768px) {
   .histoire h3 {
-    font-size: 6vw;
+    font-size: 4vw;
     margin: 10vw auto 6vw 4vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  .histoire h3 {
+    font-size: 6vw;
   }
 }
 
@@ -250,11 +279,16 @@ main .menu nav a {
 }
 @media screen and (max-width: 768px) {
   .contentGalerie {
+    padding: 1%;
+    width: 70%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .contentGalerie {
     display: flex;
     flex-direction: column;
     width: 80%;
-    height: auto;
-    margin-bottom: 10vh;
   }
 }
 .contentGalerie div {
@@ -317,6 +351,79 @@ main .menu nav a {
 .contentGalerie div:nth-of-type(12) {
   grid-column-start: 3;
   grid-row-start: 4;
+}
+
+.sectionContact {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .sectionContact {
+    height: 84vh;
+  }
+}
+.sectionContact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ecc2ab;
+  width: 60%;
+  height: 80%;
+  margin: auto;
+  border-radius: 5px;
+}
+@media screen and (max-width: 768px) {
+  .sectionContact form {
+    width: 70%;
+    height: 80%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .sectionContact form {
+    width: 80%;
+    height: 60%;
+  }
+}
+.sectionContact form div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70%;
+  height: 10%;
+}
+.sectionContact form div input {
+  height: 80%;
+  width: 60%;
+  background-color: transparent;
+  border: none;
+  border-top: 1px solid #54505e;
+  border-bottom: 2px solid #54505e;
+  margin: 0 0 auto auto;
+}
+.sectionContact form input:focus-visible {
+  outline: unset;
+}
+.sectionContact form button {
+  padding: 2% 6%;
+  font-family: adlery-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5vw;
+  color: #54505e;
+  background-color: transparent;
+  border: #e5989b 2px solid;
+  border-radius: 5px;
+  box-sizing: content-box;
+}
+.sectionContact form button:hover {
+  background-color: #e5989b;
+  transition: 0.3s;
 }
 
 .dark-mode {
